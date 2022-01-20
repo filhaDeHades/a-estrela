@@ -1,25 +1,17 @@
-# Algoritmo A* em um grid.
+# Códigos Suplementares do projeto [Entropy](https://github.com/LucasMartelloNogueira/Entropy)
 
-## Descrição:
+Esse repositório contém os códigos satélites do Projeto Entropy, o projeto tem como objetivo medir a entropia de uma cidade, observando a movimentação dos agentes entre os lugares (essa movimentação se dá com base em alguns parametros).
 
-Esse código implementa o algoritmo a* utilizando matrizes para simular grids.
-Esse código foi criado para auxiliar em um Projeto de Iniciação Ciêntifica ligado ao
-repositório [Entropy](https://github.com/LucasMartelloNogueira/Entropy).
+Os Projetos inclusos aqui são:
 
-## Como utilizar:
-1. Adicionar a pasta ao seu projeto.
+- **Algoritmo A-Estrela (a_estrela)**
 
-2. Adicionar a linha a baixo no seu código.
-```python
-from AEstrela import a_estrela
-```
-3. Para utilizar a função basta escrever a linha abaixo no seu programa.
-```python
-custo = a_estrela.aStar(posicao1, posicao2, matriz)
-```
-A função retornará o a distância entre as 2 células.
+Esse projeto tem como objetivo informar a menor distância entre 2 células de uma matriz utilizando o algoritmo A* (A-estrela) para fazer o cálculo.
 
-## Autora:
-[Tamires da Hora dos Santos](https://www.linkedin.com/in/tamires-da-hora-dos-santos-851a96170/)
+[README a-estrela](./a_estrela/README.md)
 
-Estudante de Ciência da Computação na UFF - (Universidade Federal Fluminense)
+- **Automação da criação de slides (image_generator)**
+
+Esse projeto tem como objetivo automatizar a criação de slides com os gráficos gerados durante as simulações, os arquetipos usados e o valor dos principais parametros.
+
+[README image_generator](./image_generator/README.md)
