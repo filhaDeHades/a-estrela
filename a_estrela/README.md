@@ -3,8 +3,10 @@
 ## Descrição:
 
 Esse código implementa o algoritmo a* utilizando matrizes para simular grids.
-Esse código foi criado para auxiliar em um Projeto de Iniciação Ciêntifica ligado ao
-repositório [Entropy](https://github.com/LucasMartelloNogueira/Entropy).
+
+Esse código foi criado para auxiliar no Projeto de Iniciação Científica que utiliza o repositório [Entropy](https://github.com/LucasMartelloNogueira/Entropy).
+
+Esse diretório faz parte do repositório [satellite-code-entropy](https://github.com/filhaDeHades/satellite-code-entropy).
 
 ## Como utilizar:
 1. Adicionar a pasta ao seu projeto.
