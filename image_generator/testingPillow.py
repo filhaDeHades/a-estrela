@@ -2,6 +2,12 @@ from PIL import Image, ImageColor, ImageFont, ImageDraw
 
 #Constants:
 TIPOS = ['modo', 'tam','color', 'title','save']
+LARGGRAFICOS = 640
+ALTGRAFICOS = 480
+TAMARQUETIPOS = 480
+HORIZONTALDIST = 50
+INICIALVERTICALDIST = 300
+DISTANCIAGRAFICOS = TAMARQUETIPOS + 2 * HORIZONTALDIST
 
 #Configurations inputs:
 numarq_inp = 0
@@ -60,12 +66,11 @@ def takeInput2(name):
 
 def recuperandoArquetipos(inicio, arquivo):
     imagens = []
+    cont = 0
 
     for i in range(numarq_inp):
         if i != numarq_inp-1:
             arquivo = f'{i+1}.png'
-            if i == 2:
-                arquivo = f'{i+1}-1.png'
             image2 = Image.open(inicio+f'{files_inp[0]}'+arquivo)
             arquivo = '.png'
         else:
@@ -88,13 +93,10 @@ def recuperandoGraficos(inicio, arquivo):
 
 
 def posicionandoArquetipos(imagem, arquetipos, arq=''):
-    larg = 50
-    alt = 300
     for i in range(len(arquetipos)):
         
         arq = arquetipos[i]
-        imagem.paste(arq, (larg, alt))
-        alt += 480 + 50
+        imagem.paste(arq, (HORIZONTALDIST, INICIALVERTICALDIST + i*(TAMARQUETIPOS + HORIZONTALDIST)))
 
 
 def posicionandoGraficos(imagem, graficos,pasta=0, arq=''):
@@ -147,7 +149,7 @@ def setsFundo(modo, tam=(10, 10),cor=ImageColor.getrgb("#555"),pastaBase=('(0-5)
     posicionandoArquetipos(image1, imagens, nomeArq)
     cont=0
     for i in range(6):
-        nomepasta = inicio2 + f'modelo{cont+1}\\'
+        nomepasta = inicio2 + f'arquetipo{cont+1}\\'
         graficos = recuperandoGraficos(nomepasta,arquivo)
         posicionandoGraficos(image1, graficos, cont, nomeArq)
         cont += 1
@@ -160,3 +162,5 @@ takeInput2('inputConfig.txt')
 for param in inputs['save'][1]:
     pastaBase = (inputs['save'][0], param)
     setsFundo(inputs['modo'], inputs['tam'],inputs['color'],pastaBase)
+
+#FALTA COLOCAR A POSIÇÃO DO FUNDO PARA MUDAR DE ACORDO C A QUANTIDADE DE GRAFICOS E ALTERAR LINHA 151

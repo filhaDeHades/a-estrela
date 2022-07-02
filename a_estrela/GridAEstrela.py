@@ -8,6 +8,14 @@ class GridAEstrela:
     """
 
     def __init__(self, qnt_linhas, qnt_colunas, matriz_layout = None):
+        """Construtor da Classe GridAEstrela.
+
+        Args:
+            qnt_linhas (int): Número de linhas do grid.
+            qnt_colunas (int): Número de colunas do grid.
+            matriz_layout (list, optional): Layout com a distribuição das células de lugares. Defaults to None.
+        """
+
         self.qnt_linhas = qnt_linhas
         self.qnt_colunas = qnt_colunas
 
